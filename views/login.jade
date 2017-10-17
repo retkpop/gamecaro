@@ -1,0 +1,40 @@
+extends layout
+
+block content
+        
+        // Pen Title
+        .pen-title
+            h1 Đăng nhập
+            span
+                | Sử dụng tài khoản từ hệ thống kieutam.com
+        .module.form-module
+            .toggle
+                i.fa.fa-times.fa-pencil
+            .form
+                h2 Đăng nhập hệ thống
+                .formInput
+                    input(type='text' name='username' id='userNameLg' placeholder='Username')
+                    input(type='password' name='password' id='passwordLg' placeholder='Password')
+                    button#submitLogin Đăng nhập
+            //.form
+                h2 Create an account
+                form
+                    input(type='text' placeholder='Username')
+                    input(type='password' placeholder='Password')
+                    input(type='email' placeholder='Email Address')
+                    input(type='tel' placeholder='Phone Number')
+                    button Register
+            .cta
+                | Bạn chưa có tài khoản? 
+                a(href='/users/register') Đăng ký
+
+        // Input Mixin
+        mixin input(type, placeholder)
+            input(type=type
+                placeholder=placeholder)
+
+        // Button Mixin
+        mixin button(value)
+            button=value
+        
+        
